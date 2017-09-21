@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--<script src="https://cdn.bootcss.com/vue/2.4.2/vue.js"></script>-->
+
+    <script src="../bower_components/vue/dist/vue.js"></script>
+    <script src="https://cdn.bootcss.com/vue-router/2.7.0/vue-router.js"></script>
+
+</head>
+<body>
+<div id="app">
+    {{message}}
+
+    <div>
+
+        <form action="index.html">
+            <input  v-on:submit.prevent="onSubmit" type="submit"  value="555" >
+        </form>
+        <input type="text" v-model="name">
+        <button v-on:click="show" >点击</button>
+        <P  v></P>
+        <h1 v-for="item in arr">{{item}}</h1>
+        <router-link to="/news"><button>565</button></router-link>
+        <router-view></router-view>
+    </div>
+    <script type="x-template" id="tem">
+     <div> hello{{message}}</div>
+</script>
+</div>
+
+</body>
+<script src="index.js"></script>
+</html>
